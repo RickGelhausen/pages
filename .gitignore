@@ -9,6 +9,7 @@ _site/
 bib-env/
 # Additional Ruby/bundler ignore for when you run: bundle install
 /vendor
+assets/bibtex/all.bib
 
 # Specific ignore for GitHub Pages
 # GitHub Pages will always use its own deployed version of pages-gem
