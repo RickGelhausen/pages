@@ -2,6 +2,7 @@
 Transform a BibTeX file into a single YAML file containing all bibtex entries
 """
 import re
+import os
 import argparse
 import bibtexparser
 import yaml
@@ -96,6 +97,10 @@ def create_yaml_file(bib_entries, output_file):
             'pdf': pdf_href,
             'abstract': abstract
         })
+
+    output_dir = os.path.dirname(output_file)
+    if output_dir and not os.path.exists(output_dir):
+        os.makedirs(output_dir)
 
     with open(output_file, 'w', encoding="utf-8") as yaml_file:
         for entry in yaml_data:
