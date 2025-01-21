@@ -1,0 +1,65 @@
+
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+}
+
+.contact-card {
+    max-width: 720px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.vertical-text {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    text-orientation: mixed;
+}
+
+pre {
+    background-color: #f5f5f5; /* Light gray background */
+    color: #333; /* Dark text */
+    padding: 15px; /* Uniform padding */
+    border-radius: 5px; /* Rounded corners for the block */
+    border: 1px solid #ccc; /* Single border around the entire block */
+    font-family: 'Courier New', Courier, monospace; /* Consistent monospace font */
+    font-size: 1rem; /* Uniform font size */
+    line-height: 1.6; /* Add spacing between lines */
+    white-space: pre-wrap; /* Wrap long lines */
+    overflow-x: auto; /* Allow horizontal scrolling if needed */
+    margin: 0; /* Remove default margins */
+}
+
+code {
+    background: none; /* Remove background for inline code inside pre */
+    padding: 0; /* Remove extra padding from code inside pre */
+    border: none; /* Remove borders for inline code */
+    font-family: inherit; /* Inherit font settings from pre */
+    color: inherit; /* Match the font color */
+}
+
+.left-align mjx-container[jax="CHTML"][display="true"] {
+    text-align: left !important;
+}
+
+table {
+    border-collapse: collapse;
+    width: 50%;
+}
+table, th, td {
+    border: 1px solid #ddd;
+    text-align: left;
+    padding: 8px;
+}
+th {
+    background-color: #f8f9fa;
+}
+
+@import "header";
