@@ -18,15 +18,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - uses: dorny/paths-filter@v3
-        id: filter
-        with:
-          filters: |
-            bibtex:
-              - 'assets/bibtex/**/*'
-
-      - name: Build the publication list (if bibtex entry was added or changed)
-        if: steps.filter.outputs.bibtex == 'true'
+      - name: Build the publication list
         run: |
           sudo apt-get update
           sudo apt-get install -y python3 python3-pip
