@@ -1,0 +1,20 @@
+<div class="publication-entry my-2 d-flex align-items-start">
+    <i class="fa-sharp fa-regular fa-square me-2 mt-1"></i>
+    <p class="mb-0">
+        {% if publication.authors %}
+        <span class="authors">{{ publication.authors | join: ", " }}</span>.
+        {% endif %}
+        {% if publication.year %}
+        <span class="year">({{ publication.year }}).</span>
+        {% endif %}
+        {% if publication.title %}
+        <span class="title"><strong>{{ publication.title }}</strong>.</span>
+        {% endif %}
+        {% if publication.journal %}
+        <span class="journal"><em>{{ publication.journal }}</em></span>
+        {% endif %}
+        {% if publication.doi %}
+        <br><span class="doi"> <a href="{{ publication.doi }}" target="_blank">{{ publication.doi }}</a></span>
+        {% endif %}
+    </p>
+</div>
