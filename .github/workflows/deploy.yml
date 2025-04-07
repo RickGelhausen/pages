@@ -29,7 +29,7 @@ jobs:
           cat assets/bibtex/*.bib > assets/bibtex/all.bib
           cat assets/bibtex/all.bib
           python3 scripts/bibparser.py -i assets/bibtex/all.bib -o _data/publications.yml
-          cat _data/publication.yml
+          cat _data/publications.yml
           
       - name: Build the jekyll page
         run: |
