@@ -20,14 +20,17 @@ jobs:
 
       - name: Build the publication list
         run: |
+          set -x
           sudo apt-get update
           sudo apt-get install -y python3 python3-pip
 
           pip install -U bibtexparser Jinja2 pyyaml
 
           cat assets/bibtex/*.bib > assets/bibtex/all.bib
+          cat assets/bibtex/all.bib
           python3 scripts/bibparser.py -i assets/bibtex/all.bib -o _data/publications.yml
-
+          cat _data/publication.yml
+          
       - name: Build the jekyll page
         run: |
           sudo apt-get update
