@@ -26,6 +26,7 @@ jobs:
 
           pip install -U bibtexparser Jinja2 pyyaml
 
+          ls assets/bibtex/
           cat assets/bibtex/*.bib > assets/bibtex/all.bib
           python3 scripts/bibparser.py -i assets/bibtex/all.bib -o _data/publications.yml
           cat _data/publications.yml
